@@ -1,26 +1,9 @@
-
-
-
 from itertools import product
 import random
-
-
-
-
 N=2  # no of dice
-   
 M= set(product([1,2,3,4,5,6] , repeat=N))  
-
-
-
-
-print(M) # print sample space
-
-print( len(M))   # print length ofsample space
-
-
-
-
+print(M) 
+print( len(M))  
 E1={X for X in M if X[0]+X[1]==2} # sum of the no. on dices is 2
 
 E2={X for X in M if X[0]+X[1]==3} # sum of the no. on dices is 3
@@ -43,11 +26,7 @@ E10={X for X in M if X[0]+X[1]==11}  # sum of the no. on dices is 11
 
 E11={X for X in M if X[0]+X[1]==12}  # sum of the no. on dices is 12
 
-
-
-
 E1,E2,E3,E5,E6,E7,E8,E9,E10,E11  # print all possible event
-
 
 P=[E1,E2,E3,E4,E5,E6,E7,E8,E9,E10,E11]
 Event= random.choice(P) # that select an event randomly from all possible event set
